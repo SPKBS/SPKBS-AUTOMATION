@@ -1,0 +1,620 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #ffffff;
+  color: #0f0e0e;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100px;
+  z-index: 1000;
+
+  padding: 12px 5%;
+
+  background: #ffffff;
+
+  border-bottom: 5px solid #eeeeee;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+
+  justify-content: flex-start;
+}
+/* =========================
+   NAVBAR LOGO SPACE
+========================= */
+
+.navbar-logo-space {
+  width: 180px;
+
+  height: 65px;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: visible;
+}
+
+
+/* =========================
+   NAVBAR LOGO
+========================= */
+
+.brand-logo {
+  display: flex;
+
+  align-items: center;
+
+  height: 65px;
+
+  margin-left: -35px;
+
+  margin-top: 8px;
+}
+
+.brand-logo img {
+  display: block;
+
+  width: 180px;
+
+  height: auto;
+
+  object-fit: contain;
+
+  user-select: none;
+
+  -webkit-user-drag: none;
+}
+
+/* =========================
+   BRAND LOGO
+========================= */
+
+.brand-logo {
+  display: flex;
+  align-items: leftSS;
+  margin-left: -205px;
+  margin-top: 17px;
+  height: 65px;
+
+  transition: transform 0.3s ease;
+}
+
+.brand-logo img {
+  display: block;
+
+  width: 50px;
+  height: auto;
+transform: scale(2.3);
+  object-fit: contain;
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+
+/* =========================
+   NAV LINKS
+========================= */
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  
+  margin-left: 170px;
+}
+
+.nav-links a {
+  position: relative;
+
+  color: #d49b18;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #121211;
+}
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: -8px;
+  left: 0;
+
+  width: 0;
+  height: 2px;
+
+  background: #f4b942;
+
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 100vh;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  padding: 150px 8% 80px;
+
+  background: #ffffff;
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 900px;
+}
+
+.hero-label {
+  margin-bottom: 25px;
+
+  color: #d49b18;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+/* =========================
+   HERO TITLE
+========================= */
+
+.hero h1 {
+  color: #111111;
+
+  font-size: clamp(55px, 8vw, 125px);
+
+  line-height: 0.88;
+
+  font-weight: 900;
+
+  letter-spacing: -5px;
+}
+
+.hero h1 span {
+  display: block;
+
+  color: transparent;
+
+  -webkit-text-stroke: 1.5px #111111;
+}
+
+/* =========================
+   HERO DESCRIPTION
+========================= */
+
+.hero-description {
+  max-width: 600px;
+
+  margin-top: 35px;
+
+  color: #171616;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+}
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+.hero-buttons {
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 40px;
+}
+
+.primary-button,
+.secondary-button {
+  padding: 17px 28px;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  transition: 0.3s ease;
+}
+
+
+
+
+/* =========================
+   SIDE TEXT
+========================= */
+
+.hero-side-text {
+  position: absolute;
+
+  right: 5%;
+  bottom: 60px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  color: #777777;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.hero-side-text span {
+  color: #f4b942;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .navbar {
+    padding: 18px 5%;
+  }
+
+  .hero {
+    padding: 140px 7% 80px;
+  }
+
+  .hero h1 {
+    letter-spacing: -3px;
+  }
+
+  .hero-side-text {
+    display: none;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .logo-main {
+    font-size: 20px;
+  }
+
+  .logo-sub {
+    font-size: 7px;
+
+    letter-spacing: 3px;
+  }
+
+
+
+  .hero {
+    padding: 130px 6% 70px;
+  }
+
+  .hero h1 {
+    font-size: 52px;
+
+    letter-spacing: -3px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+
+  .brand-logo {
+    height: 50px;
+  }
+
+  .brand-logo img {
+    width: 125px;
+  }
+
+}
+/* =========================
+   SPKBS LOGO HERO
+========================= */
+
+.logo-hero {
+  min-height: 100vh;
+
+  width: 100%;
+
+  background: #ffffff;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 130px 5% 70px;
+
+  overflow: hidden;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.animated-logo {
+  width: min(850px, 90vw);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.hero-logo-image {
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+
+  user-select: none;
+
+  -webkit-user-drag: none;
+
+  transition: transform 0.5s ease;
+}
+
+
+/* =========================
+   LOGO HOVER
+========================= */
+
+.animated-logo:hover .hero-logo-image {
+  transform: scale(1.02);
+}
+
+
+/* =========================
+   TEXT BELOW IMAGE
+========================= */
+
+.logo-bottom-text {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  margin-top: 35px;
+}
+
+
+/* =========================
+   INDUSTRIAL AUTOMATION
+========================= */
+
+.logo-bottom-text h2 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: clamp(22px, 3vw, 42px);
+
+  font-weight: 900;
+
+  letter-spacing: 6px;
+
+  line-height: 1.2;
+}
+
+
+/* =========================
+   GOLD LINE
+========================= */
+
+.logo-line {
+  height: 4px;
+
+  margin: 18px 0;
+
+  background: #f4b942;
+
+  border-radius: 10px;
+}
+
+
+/* =========================
+   TAGLINE
+========================= */
+
+.logo-bottom-text p {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: clamp(13px, 1.5vw, 19px);
+
+  font-weight: 800;
+
+  letter-spacing: 4px;
+}
+
+.logo-bottom-text p span {
+  color: #f4b942;
+
+  margin: 0 12px;
+
+  font-size: 20px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .logo-hero {
+    padding: 120px 5% 60px;
+  }
+
+  .animated-logo {
+    width: 100%;
+  }
+
+  .logo-bottom-text {
+    margin-top: 20px;
+  }
+
+  .logo-bottom-text h2 {
+    font-size: 20px;
+
+    letter-spacing: 3px;
+  }
+
+  .logo-bottom-text p {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+  }
+
+  .logo-bottom-text p span {
+    margin: 0 6px;
+  }
+
+}
+/* =========================
+   BLACK SECTION DIVIDER
+========================= */
+
+.black-section-line {
+  width: 500px;
+
+  height: 12px;
+
+  background: #111111;
+
+  margin-top: 45px;
+
+  border-radius: 0;
+
+  transform-origin: center;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 1000px) {
+
+  .black-section-line {
+    height: 8px;
+
+    margin-top: 30px;
+  }
+
+}
+/* =========================
+   EMPTY SPACE AFTER HERO
+========================= */
+
+.hero-empty-space {
+  width: 100%;
+  height: 1000px;
+}
+
+@media (max-width: 700px) {
+  .hero-empty-space {
+    height: 100px;
+  }
+}
