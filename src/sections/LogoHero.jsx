@@ -2,98 +2,45 @@ import { motion } from "motion/react";
 
 function LogoHero() {
   return (
-    <section className="logo-hero">
+    <section id="home" className="logo-hero">
 
-      {/* LOGO */}
-      <motion.div
-        className="animated-logo"
-        initial={{
-          opacity: 0,
-          scale: 0.75,
-          y: -40,
-        }}
-        animate={{
-          opacity: 1,
-          scale: 1,
-          y: 0,
-        }}
-        transition={{
-          duration: 1.2,
-          delay: 0.2,
-          ease: [0.16, 1, 0.3, 1],
-        }}
-      >
-        <img
-          src="/images/spkbs-logo.png"
-          alt="SPKBS Automation"
-          className="hero-logo-image"
-        />
-      </motion.div>
+      <div className="home-hero-content">
 
-      {/* TEXT BELOW LOGO */}
-      <div className="logo-bottom-text">
+        {/* SMALL LABEL */}
 
-        {/* INDUSTRIAL AUTOMATION */}
-        <motion.h2
-          initial={{
-            opacity: 0,
-            y: 40,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 0.9,
-            delay: 0.9,
-            ease: [0.16, 1, 0.3, 1],
-          }}
-        >
-          INDUSTRIAL AUTOMATION
-        </motion.h2>
-
-        {/* GOLD LINE */}
-        <motion.div
-          className="logo-line"
-          initial={{
-            width: 0,
-            opacity: 0,
-          }}
-          animate={{
-            width: 120,
-            opacity: 1,
-          }}
-          transition={{
-            duration: 0.7,
-            delay: 1.2,
-            ease: [0.16, 1, 0.3, 1],
-          }}
-        />
-
-        {/* TAGLINE */}
         <motion.p
-          initial={{
-            opacity: 0,
-            y: 25,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
+          className="home-hero-label"
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{
             duration: 0.8,
-            delay: 1.4,
+            delay: 0.2,
+          }}
+        >
+          SPKBS AUTOMATION
+        </motion.p>
+
+
+        {/* MAIN HEADING */}
+
+        <motion.h1
+          initial={{ opacity: 0, y: 80 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 1,
+            delay: 0.35,
             ease: [0.16, 1, 0.3, 1],
           }}
         >
-          DRIVE SMARTER
-          <span>•</span>
-          BUILD BETTER
-        </motion.p>
+          INDUSTRIAL
+          <span>AUTOMATION</span>
+        </motion.h1>
 
-        {/* BLACK SECTION DIVIDER */}
+
+        {/* GOLD LINE */}
+
         <motion.div
-          className="black-section-line"
+          className="home-hero-line"
           initial={{
             width: 0,
             opacity: 0,
@@ -104,13 +51,91 @@ function LogoHero() {
           }}
           transition={{
             duration: 1,
-            delay: 1.8,
+            delay: 0.9,
             ease: [0.16, 1, 0.3, 1],
           }}
         />
-        <div className="hero-empty-space"></div>
+
+
+        {/* TAGLINE */}
+
+        <motion.div
+          className="home-hero-tagline"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.8,
+            delay: 1.1,
+          }}
+        >
+          <strong>DRIVE SMARTER</strong>
+
+          <span>•</span>
+
+          <strong>BUILD BETTER</strong>
+        </motion.div>
+
+
+        {/* DESCRIPTION */}
+
+        <motion.p
+          className="home-hero-description"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.8,
+            delay: 1.3,
+          }}
+        >
+          INDUSTRIAL AUTOMATION • DIGITALIZATION • INDUSTRY 4.0
+        </motion.p>
+
+
+        {/* BOTTOM LINE */}
+
+        <motion.div
+          className="home-hero-bottom"
+          initial={{
+            scaleX: 0,
+            opacity: 0,
+          }}
+          animate={{
+            scaleX: 1,
+            opacity: 1,
+          }}
+          transition={{
+            duration: 1,
+            delay: 1.5,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+        />
 
       </div>
+
+
+      {/* SCROLL INDICATOR */}
+
+      <motion.div
+        className="home-scroll"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          delay: 2,
+          duration: 0.8,
+        }}
+      >
+        <span>SCROLL TO EXPLORE</span>
+
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+          }}
+        >
+          ↓
+        </motion.div>
+      </motion.div>
 
     </section>
   );

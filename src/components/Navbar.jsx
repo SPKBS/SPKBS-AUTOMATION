@@ -1,106 +1,55 @@
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
 
 function Navbar() {
-  const [showLogo, setShowLogo] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      // Logo appears after scrolling 120px
-      if (window.scrollY > 120) {
-        setShowLogo(true);
-      } else {
-        setShowLogo(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    handleScroll();
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <motion.header
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8 }}
+      transition={{
+        duration: 0.8,
+        ease: [0.16, 1, 0.3, 1],
+      }}
       className="navbar"
     >
       <div className="navbar-container">
 
-        {/* NAVBAR LOGO */}
-        <div className="navbar-logo-space">
-
-          <AnimatePresence>
-
-            {showLogo && (
-              <motion.a
-                href="/"
-                className="brand-logo"
-
-                initial={{
-                  opacity: 0,
-                  scale: 0.7,
-                  x: -30,
-                }}
-
-                animate={{
-                  opacity: 1,
-                  scale: 1,
-                  x: 0,
-                }}
-
-                exit={{
-                  opacity: 0,
-                  scale: 0.7,
-                  x: -30,
-                }}
-
-                transition={{
-                  duration: 0.5,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-              >
-                <img
-                  src="/images/spkbs-logo.png"
-                  alt="SPKBS Automation"
-                />
-              </motion.a>
-            )}
-
-          </AnimatePresence>
-
-        </div>
-
+        {/* SPKBS LOGO */}
+        <motion.a
+          href="#home"
+          className="brand-logo"
+          initial={{
+            opacity: 0,
+            x: -30,
+          }}
+          animate={{
+            opacity: 1,
+            x: 0,
+          }}
+          transition={{
+            duration: 0.7,
+            delay: 0.2,
+          }}
+        >
+          <img
+            src="/images/spkbs-logo.png"
+            alt="SPKBS Automation"
+          />
+        </motion.a>
 
         {/* NAVIGATION */}
         <nav className="nav-links">
 
-          <a href="/">Home</a>
+          <a href="#home">Home</a>
 
-          <a href="/automation">
-            Automation
-          </a>
+          <a href="#solutions">Solutions</a>
 
-          <a href="/industry-4">
-            Industry 4.0
-          </a>
+          <a href="#industries">Industries</a>
 
-          <a href="/training">
-            Training
-          </a>
+          <a href="#partners">Partners</a>
 
-          <a href="/projects">
-            Projects
-          </a>
+          <a href="#training">Training</a>
 
-          <a href="/about">
-            About
-          </a>
+          <a href="#contact">Contact</a>
 
         </nav>
 
