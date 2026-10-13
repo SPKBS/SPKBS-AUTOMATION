@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 function CompanyIntro() {
   return (
-    <section className="company-intro-section">
+    <section id="company" className="company-intro-section">
 
       <div className="company-intro-container">
 

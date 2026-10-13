@@ -50,7 +50,7 @@ function WhySpkbs() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            WHY SPKBS AUTOMATION
+            WHY CONNECTED AUTOMATION MATTERS
           </motion.p>
 
           <motion.h2
@@ -62,9 +62,9 @@ function WhySpkbs() {
               ease: [0.16, 1, 0.3, 1],
             }}
           >
-            ENGINEERED
-            <span>FOR</span>
-            REAL RESULTS
+            Make every
+            <span>signal</span>
+            count.
           </motion.h2>
 
         </div>
@@ -85,10 +85,10 @@ function WhySpkbs() {
         }}
       >
         <p>
-          WE CONNECT
-          <strong>INDUSTRIAL KNOWLEDGE</strong>
-          WITH
-          <strong>MODERN AUTOMATION.</strong>
+          MODERN PLANTS NEED
+          <strong>VISIBILITY, INTEGRATION</strong>
+          AND
+          <strong>ROOM TO SCALE.</strong>
         </p>
       </motion.div>
 

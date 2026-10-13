@@ -4,7 +4,7 @@ function Industries() {
   const industries = [
     {
       number: "01",
-      title: "ADVANCE MANUFACTURING",
+      title: "ADVANCED MANUFACTURING",
       description:
         "Industrial automation solutions for production systems, machine control, process monitoring and connected manufacturing operations.",
     },
