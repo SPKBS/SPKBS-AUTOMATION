@@ -130,9 +130,23 @@ function Partners() {
 
         </div>
 
-        <div className="partner-arrow">
-          ↗
-        </div>
+        
+
+<a
+  className="partner-arrow"
+  href="\public\images\ignitionpartner.png"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Open Ignition partner image"
+  style={{
+    cursor: "pointer",
+    textDecoration: "none",
+  }}
+>
+  ↗
+</a>
+
+
 
       </motion.div>
 
