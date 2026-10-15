@@ -134,7 +134,7 @@ function Partners() {
 
 <a
   className="partner-arrow"
-  href="\public\images\ignitionpartner.png"
+  href="\images\ignitionpartner.png"
   target="_blank"
   rel="noopener noreferrer"
   aria-label="Open Ignition partner image"
